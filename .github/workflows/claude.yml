@@ -159,6 +159,7 @@ jobs:
         uses: izaitsevfb/claude-code-action@ececd56fb999d06b4dd2477437bc408938295d76 # forked-pr-fix
         with:
           trigger_phrase: "@claude"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           # prompt is only set for workflow_dispatch (agent mode).
           # For issue_comment (tag mode), prompt must be empty so the action
           # uses tag mode; CLAUDE.md provides skill routing instead.
